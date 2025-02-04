@@ -1,6 +1,6 @@
-package com.example.Book.Tracker.repository;
+package com.example.repository;
 
-import com.example.Book.Tracker.model.Book;
+import com.example.model.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

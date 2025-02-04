@@ -1,8 +1,10 @@
-package com.example.Book.Tracker.model;
+package com.example.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "book")
@@ -16,7 +18,9 @@ public class Book {
     private String genre;
     private int year;
     private String status;
-
+    private String imagePath;
+    @Column(name = "publish_date_time")
+    private LocalDateTime publishDateTime;
     public long getId() {
         return id;
     }
@@ -63,5 +67,21 @@ public class Book {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+    public LocalDateTime getPublishDateTime() {
+        return publishDateTime;
+    }
+
+    public void setPublishDateTime(LocalDateTime publishDateTime) {
+        this.publishDateTime = publishDateTime;
     }
 }
